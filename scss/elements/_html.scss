@@ -1,0 +1,17 @@
+html {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	background-color: #ffffff;
+}
+
+* {
+	font-family: $font-family-base;
+}
+
+input, button, label {
+	
+	&:hover, &:focus, &:active {
+		outline: none !important;
+	}
+}

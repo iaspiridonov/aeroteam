@@ -1,0 +1,12 @@
+.nav-item {
+    padding-left: 28px;
+    padding-right: 28px;
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+}

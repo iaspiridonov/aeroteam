@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "bootstrap5": "^1.1.9"
+    "bootstrap5": "^1.1.9",
+    "jquery": "^3.6.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

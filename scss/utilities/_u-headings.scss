@@ -1,0 +1,30 @@
+.u-h1 {
+	@extend %heading;
+	font-size: $h1-font-size !important;
+	text-transform: uppercase;
+}
+
+.u-h2 {
+	@extend %heading;
+	font-size: $h2-font-size !important;
+}
+
+.u-h3 {
+	@extend %heading;
+	font-size: $h3-font-size !important;
+}
+
+.u-h4 {
+	@extend %heading;
+	font-size: $h4-font-size !important;
+}
+
+.u-h5 {
+	@extend %heading;
+	font-size: $h5-font-size !important;
+}
+
+.u-h6 {
+	@extend %heading;
+	font-size: $h6-font-size !important;
+}
