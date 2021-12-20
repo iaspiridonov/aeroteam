@@ -1,6 +1,19 @@
 .nav-item {
-    padding-left: 28px;
-    padding-right: 28px;
+
+    display: inline-flex;
+    margin: auto;
+
+    @media (min-width: $lg) {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        margin: inherit;
+    }
+
+    @media (min-width: $xl) {
+        padding-right: 28px;
+        padding-left: 28px;
+    }
 
     &:first-child {
         padding-left: 0;

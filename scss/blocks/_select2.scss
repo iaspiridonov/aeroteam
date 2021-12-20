@@ -1,0 +1,38 @@
+.select2-selection__rendered {
+    line-height: 48px !important;
+}
+
+.select2-container .select2-selection--single,
+.select2-selection__clear,
+.select2-selection__arrow {
+    height: 100% !important;
+}
+
+.select2-selection {
+    border: none !important;
+    border-bottom: 1px solid #CBD1DC !important;
+    transition: .3s;
+    border-radius: 0 !important;
+
+    &:hover {
+        border-color: $color-text !important;
+    }
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 15px !important;
+}
+
+.select2-selection__clear {
+    display: none ;
+}
+
+.select2-selection__placeholder {
+    color: #B8BBC0 !important;
+    font-size: 16px;
+    font-weight: 400;
+
+    @media (min-width: $lg) {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,87 @@
+.weekend-item {
+    position: relative;
+
+    &__img {
+        width: 100%;
+        transition: .3s;
+        box-shadow: 0px 18px 76px rgba(192, 195, 201, 0.34);  
+    }
+
+    &__text {
+        z-index: -1;
+        margin-top: 10px;
+        bottom: 0;
+        left: 0;
+        transition: .3s;
+
+        @media (min-width: $md) {
+            position: absolute;
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        &-desc {
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &__tag {
+        position: absolute;
+        right: 0;
+        top: 25px;
+        font-size: 12px;
+        font-weight: 600;
+        background-color: #fff;
+        padding: 6px 12px;
+
+        &--popular {
+            background-color: #FFC122;
+        }
+    }
+
+    &__nav {
+        bottom: -80px;
+        top: initial;
+        width: 60px;
+        height: 60px;
+        background-color: #292323;
+        cursor: pointer;
+
+        @media (min-width: $sm) {
+            bottom: -110px;
+        }
+
+        &:after {
+            font-size: 21px !important;
+            color: #fff;
+            padding-top: 4px;
+        }
+
+        &.swiper-button-disabled {
+            background-color: #EDEFF2;
+            opacity: 1;
+
+            &:after {
+                color: #000;
+            }
+        }
+
+        &.swiper-button-prev {
+            right: 85px;
+            left: initial;   
+        }
+
+        &.swiper-button-next {
+            right: 15px;
+
+            &::after {
+                padding-left: 3px;
+            }
+        }
+    }
+}

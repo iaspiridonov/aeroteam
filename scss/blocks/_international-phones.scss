@@ -1,0 +1,26 @@
+.js-phone {
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid #CBD1DC;
+    transition: .3s;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+
+    @media (min-width: $lg) {
+        font-size: 18px;
+    }
+
+    &:hover {
+        border-color: $color-text;
+    }
+
+    &::placeholder {
+        color: #B8BBC0;
+    }
+}
+
+.iti__flag-container > * {
+    background-color: #fff !important;
+}

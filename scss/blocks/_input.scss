@@ -1,0 +1,73 @@
+.input {
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid #CBD1DC;
+    transition: .3s;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: transparent;
+
+    @media (min-width: $lg) {
+        font-size: 18px;
+    }
+
+    &:hover {
+        border-color: $color-text;
+    }
+
+    &::placeholder {
+        color: #B8BBC0;
+    }
+}
+
+.input--cta {
+    margin-right: 25px;
+    width: 25%;
+}
+
+.input__submit-transparent {
+    border-radius: 0;
+    height: 45px;
+    border-radius: 2px;
+    color: #fff;
+    border: 1px solid #fff;
+    width: 200px;
+
+    &:hover {
+        background-color: #fff;
+        color: $color-secondary;
+        border-color: #fff;
+    }
+}
+
+.input--call {
+    height: 45px;
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    width: 80%;
+
+    @media (min-width: $xl) {
+        margin-right: 50px;
+    }
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 255);
+    }
+    
+    @media (min-width: $sm) {
+        width: 72%;
+        margin-right: 30px;
+    }
+    
+    @media (min-width: $md) {
+        width: 62%;
+    }
+
+    @media (min-width: $lg) {
+        width: 45%;
+    }
+}

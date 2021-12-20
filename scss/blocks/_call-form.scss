@@ -1,0 +1,43 @@
+.call-form {
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #fff;
+
+        @media (min-width: $md) {
+            font-size: 22px;
+        }
+
+        @media (min-width: $lg) {
+            font-size: 28px;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 0;
+        font-size: 16px;
+        color: #FF99A5;
+        font-weight: 400;
+
+        @media (min-width: $lg) {
+            font-size: 18px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (min-width: $sm) {
+            justify-content: flex-start;
+        }
+
+        @media (min-width: $lg) {
+            flex-wrap: nowrap;
+        }
+    }
+}

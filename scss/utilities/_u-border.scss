@@ -1,0 +1,14 @@
+.u-border-right-sm-white {
+
+    @media (min-width: $sm) {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+.u-border-bottom-m-white {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    @media (min-width: $sm) {
+        border-bottom: none;
+    }
+}

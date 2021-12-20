@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/node_modules/bootstrap5/src/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="/node_modules/intl-tel-input/build/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/node_modules/@fancyapps/ui/dist/fancybox.css">
     <link rel="stylesheet" href="/css/main.min.css">
-
     <title>Aeroteam|Главная</title>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top bg-white">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand order-0" href="#">
                 <img src="img/logo.png" alt="logo" loading="lazy">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link nav-link--active" href="#">Главная</a>
@@ -35,8 +35,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="d-flex">
-                <a href="tel:+37379472172" class="button button--transparent me-3">
+            <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.25 22.5H15V20H26.25V22.5ZM26.25 16.25H3.75V13.75H26.25V16.25ZM26.25 10H3.75V7.5H26.25V10Z" fill="#292323"/>
+                </svg>
+            </button>
+            <div class="d-flex order-1 order-lg-3">
+                <a href="tel:+37379472172" class="d-none d-lg-flex button button--transparent me-3">
                     <div class="u-line-height-1">+(373) 794-721-72</div>
                     <div class="u-font-size-0p75">Бесплатная консультация</div>
                 </a>
@@ -56,31 +61,406 @@
                     Дарите подарочные сертификаты на новые потрясающие эмоции Вашим родным и близким!
                 </div>
                 <form action="#" method="POST" class="cta-form__form">
-                    <select name="cert" id="cert">
-                        <option value="1">обычный</option>
-                        <option value="2">необычный</option>
-                    </select>
-                    <input type="time" name="time">
-                    <input type="text" name="name" placeholder="Имя, фамилия">
-                    <input type="text" name="name" placeholder="Имя, фамилия">
-                    <input type="sumbit" value="Заказать" class="button">
+                    <div class="cta-form__container">
+                        <div class="cta-form__item-wrapper">
+                            <select name="cert" class="js-enter-cert">
+                                <option></option>
+                                <option value="1">обычный</option>
+                                <option value="2">необычный</option>
+                            </select>
+                        </div>
+                        <div class="cta-form__item-wrapper">
+                            <select name="time" class="js-enter-time">
+                                <option></option>
+                                <option value="1">13:00 - 14:00</option>
+                                <option value="2">14:00 - 15:00</option>
+                            </select>
+                        </div>
+                        <div class="cta-form__item-wrapper">
+                            <input class="input input--cta" type="text" name="name" placeholder="Имя, фамилия">
+                        </div>
+                        <div class="cta-form__item-wrapper">
+                            <input class="js-phone" type="text" name="phone" placeholder="Телефон">
+                        </div>
+                    </div>
+                    <input type="submit" value="Заказать" class="button ms-xxl-5 ms-xl-4 ms-lg-3 ms-0 mt-4 mt-lg-0">
                 </form>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="row align-items-center">
-            <div class="col-4">
-
+    <section class="section section--weekend">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 col-sm-6 col-12 mb-4 mb-sm-0">
+                    <div class="u-h1 mb-3">
+                        Проведите запоминающиеся выходные!
+                    </div>
+                    <div class="u-text u-text u-text--gray">
+                        Удивите свою вторую половинку романтическим путешествием! Предлагаем романтический полет на самолете – незабываемые и яркие впечатления гарантированы!  
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6 col-12 position-relative">
+                    <div class="swiper js-swiper-weekend">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="weekend-item">
+                                    <img class="weekend-item__img" src="/img/weekend-1.jpg" alt="weekend">
+                                    <div class="weekend-item__text">
+                                        <div class="weekend-item__text-title">Аренда самолета</div>
+                                        <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="weekend-item">
+                                    <img class="weekend-item__img" src="/img/weekend-2.png" alt="weekend">
+                                    <div class="weekend-item__text">
+                                        <div class="weekend-item__text-title">Аренда самолета</div>
+                                        <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки. Подберем самый лучший вариант частного самолета для</div>
+                                    </div>
+                                    <div class="weekend-item__tag weekend-item__tag--popular">Популярное</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="weekend-item">
+                                    <img class="weekend-item__img" src="/img/weekend-3.png" alt="weekend">
+                                    <div class="weekend-item__text">
+                                        <div class="weekend-item__text-title">Аренда самолета</div>
+                                        <div class="weekend-item__text-desc">Подберем самый</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="weekend-item">
+                                    <img class="weekend-item__img" src="/img/weekend-4.png" alt="weekend">
+                                    <div class="weekend-item__text">
+                                        <div class="weekend-item__text-title">Аренда самолета</div>
+                                        <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="weekend-item">
+                                    <img class="weekend-item__img" src="/img/weekend-4.png" alt="weekend">
+                                    <div class="weekend-item__text">
+                                        <div class="weekend-item__text-title">Аренда самолета</div>
+                                        <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- If we need navigation buttons -->
+                      <div class="swiper-button-prev weekend-item__nav"></div>
+                      <div class="swiper-button-next weekend-item__nav"></div>
+                </div>
             </div>
-            <div class="col-8">
+        </div>
+    </section>
 
+    <section class="section section--blue">
+        <div class="container">
+            <div class="row align-items-md-center">
+                <div class="col-12 col-sm-5 col-md-6 mb-4 mb-sm-0">
+                    <img class="u-mw-100" src="/img/cert.jpg" alt="cert">
+                </div>
+                <div class="col-12 col-sm-7 col-md-6 text-center">
+                    <div class="u-h1 text-white mb-3 mb-lg-4">
+                        Подарочный сертификат
+                    </div>
+                    <div class="u-text text-white mb-3 mb-lg-4">
+                        Удивите свою вторую половинку романтическим путешествием! Предлагаем романтический полет на самолете – незабываемые и яркие впечатления гарантированы!  
+                    </div>
+                    <div>
+                        <a href="#" class="button button--secondary">
+                            Заказать
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="u-h1 mb-2">
+                        Подари незабываемые ощущения близким!
+                    </div>
+                    <div class="u-text u-text--gray mb-4">
+                        Впечатления от полета навсегда останутся с вами благодаря профессиональным<br> снимкам и личному видеоролику. 
+                    </div>
+                    <div>
+                        <a href="#" class="button button--secondary">Подарить полет</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <a href="/img/gal-1.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-1.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <a href="/img/gal-2.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-2.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <a href="/img/gal-3.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-3.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <a href="/img/gal-1.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-1.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <a href="/img/gal-2.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-2.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <a href="/img/gal-3.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-3.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-1.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-1.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-2.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-2.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-3.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-3.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-1.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-1.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-2.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-2.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-3.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-3.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-1.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-1.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-2.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-2.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-3.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-3.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-1.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-1.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-2.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-2.png" alt="gallery1">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                    <a href="/img/gal-3.png" data-fancybox="gal">
+                        <img class="w-100 h-100 o-moveY" src="/img/gal-3.png" alt="gallery1">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-5 col-md-6 col-12 mb-md-0 mb-4">
+                    <div class="u-h1 mb-4">Незабываемое предложение руки и сердца</div>
+                    <div class="u-text mb-4">Удивите свою вторую половинку романтическим путешествием! Предлагаем романтический полет на самолете – незабываемые и яркие впечатления гарантированы!</div>
+                    <div>
+                        <a href="#" class="button button--transparent">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 offset-lg-1">
+                    <img class="w-100" src="/img/pred.png" alt="pred">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--secondary">
+        <div class="container">
+            <div class="row text-center text-sm-start call-form align-items-sm-center">
+                <div class="col-md-8 col-sm-7 col-12 pb-4 pb-sm-0 mb-4 mb-sm-0 u-border-right-sm-white u-border-bottom-m-white pe-sm-4">
+                    <div class="call-form__title">
+                        Получить консультацию
+                    </div>
+                    <div class="call-form__desc mb-4">
+                        Мы всегда готовы связавться с Вами
+                    </div>
+                    <form class="call-form__form" action="#">
+                        <input type="text" class="input input--call" placeholder="Имя">
+                        <input type="text" class="input input--call" placeholder="Телефон">
+                        <input type="submit" class="input input__submit-transparent mt-xl-0 mt-4" value="Оставить заявку">
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-5 col-12 ps-sm-4">
+                    <div class="call-form__title">
+                        Иванов Александр
+                    </div>
+                    <div class="call-form__desc mb-4">Консультант по продажам</div>
+                    <a href="tel:+37379472172" class="call-form__title text-white">
+                        +(373) 794-721-72
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--map">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 offset-md-7 col-12">
+                    <div class="u-h1 mb-4">
+                        Как добраться?
+                    </div>
+                    <div class="u-text mb-4">
+                        Аэродром находится возле городка Вадул-луй-Воды, это приблизительно в 20-ти км от Кишинева. К нашему сожалению, прямой маршрутки из Кишинева до аэродрома нет. Вы можете добраться на общественном транспорте.
+                    </div>
+                    <div class="u-text">
+                        Автобусы №130 и №131, едущие в Вадул-луй-Воды, или любой другой автобус или маршрутка, проезжающие через Вадул-луй-Воды. По приезду в Ваду-луй-Воды необходимо будет вызвать такси, которое довезёт Вас непосредственно до аэродрома.
+                    </div>
+                </div>
+                <div class="col-12 d-md-none d-block mt-4">
+                    <img class="w-100" src="/img/map.png" alt="map">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="u-h1">
+                        Отвечаем на вопросы
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            Как поступим, если в назначенный день будет дождь или сильный ветер?
+                        </div>
+                        <div class="accordion__desc">
+                            Если погода будет не летная, для вашей безопасности перенесем мероприятие на другой день.
+                        </div>
+                        <div class="accordion__btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6.99975H9V0.999756C9 0.734539 8.89464 0.480186 8.70711 0.292649C8.51957 0.105113 8.26522 -0.000244141 8 -0.000244141C7.73478 -0.000244141 7.48043 0.105113 7.29289 0.292649C7.10536 0.480186 7 0.734539 7 0.999756V6.99975H1C0.734783 6.99975 0.48043 7.10511 0.292893 7.29265C0.105357 7.48018 0 7.73454 0 7.99975C0 8.26497 0.105357 8.51932 0.292893 8.70686C0.48043 8.8944 0.734783 8.99975 1 8.99975H7V14.9998C7 15.265 7.10536 15.5193 7.29289 15.7069C7.48043 15.8944 7.73478 15.9998 8 15.9998C8.26522 15.9998 8.51957 15.8944 8.70711 15.7069C8.89464 15.5193 9 15.265 9 14.9998V8.99975H15C15.2652 8.99975 15.5196 8.8944 15.7071 8.70686C15.8946 8.51932 16 8.26497 16 7.99975C16 7.73454 15.8946 7.48018 15.7071 7.29265C15.5196 7.10511 15.2652 6.99975 15 6.99975Z" fill="#292323"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            Маленькие самолеты не безопасны, думаю, на таком велика вероятность разбиться.
+                        </div>
+                        <div class="accordion__desc">
+                            Если погода будет не летная, для вашей безопасности перенесем мероприятие на другой день.
+                        </div>
+                        <div class="accordion__btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6.99975H9V0.999756C9 0.734539 8.89464 0.480186 8.70711 0.292649C8.51957 0.105113 8.26522 -0.000244141 8 -0.000244141C7.73478 -0.000244141 7.48043 0.105113 7.29289 0.292649C7.10536 0.480186 7 0.734539 7 0.999756V6.99975H1C0.734783 6.99975 0.48043 7.10511 0.292893 7.29265C0.105357 7.48018 0 7.73454 0 7.99975C0 8.26497 0.105357 8.51932 0.292893 8.70686C0.48043 8.8944 0.734783 8.99975 1 8.99975H7V14.9998C7 15.265 7.10536 15.5193 7.29289 15.7069C7.48043 15.8944 7.73478 15.9998 8 15.9998C8.26522 15.9998 8.51957 15.8944 8.70711 15.7069C8.89464 15.5193 9 15.265 9 14.9998V8.99975H15C15.2652 8.99975 15.5196 8.8944 15.7071 8.70686C15.8946 8.51932 16 8.26497 16 7.99975C16 7.73454 15.8946 7.48018 15.7071 7.29265C15.5196 7.10511 15.2652 6.99975 15 6.99975Z" fill="#292323"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            Вдруг мой подарок ― воздушная прогулка ― не понравится?
+                        </div>
+                        <div class="accordion__desc">
+                            Если погода будет не летная, для вашей безопасности перенесем мероприятие на другой день.
+                        </div>
+                        <div class="accordion__btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6.99975H9V0.999756C9 0.734539 8.89464 0.480186 8.70711 0.292649C8.51957 0.105113 8.26522 -0.000244141 8 -0.000244141C7.73478 -0.000244141 7.48043 0.105113 7.29289 0.292649C7.10536 0.480186 7 0.734539 7 0.999756V6.99975H1C0.734783 6.99975 0.48043 7.10511 0.292893 7.29265C0.105357 7.48018 0 7.73454 0 7.99975C0 8.26497 0.105357 8.51932 0.292893 8.70686C0.48043 8.8944 0.734783 8.99975 1 8.99975H7V14.9998C7 15.265 7.10536 15.5193 7.29289 15.7069C7.48043 15.8944 7.73478 15.9998 8 15.9998C8.26522 15.9998 8.51957 15.8944 8.70711 15.7069C8.89464 15.5193 9 15.265 9 14.9998V8.99975H15C15.2652 8.99975 15.5196 8.8944 15.7071 8.70686C15.8946 8.51932 16 8.26497 16 7.99975C16 7.73454 15.8946 7.48018 15.7071 7.29265C15.5196 7.10511 15.2652 6.99975 15 6.99975Z" fill="#292323"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            Есть варианты прогулок всего на 10 минут. Что можно увидеть за 10 минут?
+                        </div>
+                        <div class="accordion__desc">
+                            Если погода будет не летная, для вашей безопасности перенесем мероприятие на другой день.
+                        </div>
+                        <div class="accordion__btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6.99975H9V0.999756C9 0.734539 8.89464 0.480186 8.70711 0.292649C8.51957 0.105113 8.26522 -0.000244141 8 -0.000244141C7.73478 -0.000244141 7.48043 0.105113 7.29289 0.292649C7.10536 0.480186 7 0.734539 7 0.999756V6.99975H1C0.734783 6.99975 0.48043 7.10511 0.292893 7.29265C0.105357 7.48018 0 7.73454 0 7.99975C0 8.26497 0.105357 8.51932 0.292893 8.70686C0.48043 8.8944 0.734783 8.99975 1 8.99975H7V14.9998C7 15.265 7.10536 15.5193 7.29289 15.7069C7.48043 15.8944 7.73478 15.9998 8 15.9998C8.26522 15.9998 8.51957 15.8944 8.70711 15.7069C8.89464 15.5193 9 15.265 9 14.9998V8.99975H15C15.2652 8.99975 15.5196 8.8944 15.7071 8.70686C15.8946 8.51932 16 8.26497 16 7.99975C16 7.73454 15.8946 7.48018 15.7071 7.29265C15.5196 7.10511 15.2652 6.99975 15 6.99975Z" fill="#292323"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            Хочу подарить другу сертификат, где можно забрать его?
+                        </div>
+                        <div class="accordion__desc">
+                            Если погода будет не летная, для вашей безопасности перенесем мероприятие на другой день.
+                        </div>
+                        <div class="accordion__btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6.99975H9V0.999756C9 0.734539 8.89464 0.480186 8.70711 0.292649C8.51957 0.105113 8.26522 -0.000244141 8 -0.000244141C7.73478 -0.000244141 7.48043 0.105113 7.29289 0.292649C7.10536 0.480186 7 0.734539 7 0.999756V6.99975H1C0.734783 6.99975 0.48043 7.10511 0.292893 7.29265C0.105357 7.48018 0 7.73454 0 7.99975C0 8.26497 0.105357 8.51932 0.292893 8.70686C0.48043 8.8944 0.734783 8.99975 1 8.99975H7V14.9998C7 15.265 7.10536 15.5193 7.29289 15.7069C7.48043 15.8944 7.73478 15.9998 8 15.9998C8.26522 15.9998 8.51957 15.8944 8.70711 15.7069C8.89464 15.5193 9 15.265 9 14.9998V8.99975H15C15.2652 8.99975 15.5196 8.8944 15.7071 8.70686C15.8946 8.51932 16 8.26497 16 7.99975C16 7.73454 15.8946 7.48018 15.7071 7.29265C15.5196 7.10511 15.2652 6.99975 15 6.99975Z" fill="#292323"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            Чтобы оставить заявку на полет, нужно звонить?
+                        </div>
+                        <div class="accordion__desc">
+                            Если погода будет не летная, для вашей безопасности перенесем мероприятие на другой день.
+                        </div>
+                        <div class="accordion__btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6.99975H9V0.999756C9 0.734539 8.89464 0.480186 8.70711 0.292649C8.51957 0.105113 8.26522 -0.000244141 8 -0.000244141C7.73478 -0.000244141 7.48043 0.105113 7.29289 0.292649C7.10536 0.480186 7 0.734539 7 0.999756V6.99975H1C0.734783 6.99975 0.48043 7.10511 0.292893 7.29265C0.105357 7.48018 0 7.73454 0 7.99975C0 8.26497 0.105357 8.51932 0.292893 8.70686C0.48043 8.8944 0.734783 8.99975 1 8.99975H7V14.9998C7 15.265 7.10536 15.5193 7.29289 15.7069C7.48043 15.8944 7.73478 15.9998 8 15.9998C8.26522 15.9998 8.51957 15.8944 8.70711 15.7069C8.89464 15.5193 9 15.265 9 14.9998V8.99975H15C15.2652 8.99975 15.5196 8.8944 15.7071 8.70686C15.8946 8.51932 16 8.26497 16 7.99975C16 7.73454 15.8946 7.48018 15.7071 7.29265C15.5196 7.10511 15.2652 6.99975 15 6.99975Z" fill="#292323"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="/node_modules/bootstrap5/src/js/bootstrap.bundle.min.js"></script>
+    <script src="/node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="/node_modules/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="/node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>

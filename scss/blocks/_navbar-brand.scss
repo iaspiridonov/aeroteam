@@ -1,0 +1,15 @@
+.navbar-brand {
+    margin-right: 0;
+
+    @media (min-width: $lg) {
+        margin-right: 10%;
+    }
+
+    @media (min-width: $xl) {
+        margin-right: 15%;
+    }
+
+    @media (min-width: $xxl) {
+        margin-right: 20%;
+    }
+}

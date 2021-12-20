@@ -1,8 +1,8 @@
 .button {
     background-color: $color-primary;
-    padding: 0 25px;
-    height: 48px;
-    display: flex;
+    padding: 0 15px;
+    height: 40px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     color: #fff;
@@ -13,9 +13,30 @@
     text-decoration: none;
     text-align: center;
     flex-direction: column;
+    min-width: 120px;
+
+    @media (min-width: $lg) {
+        height: 48px;
+        min-width: 180px;
+    }
+
+    @media (min-width: $xxl) {
+        padding: 0 25px;
+    }
 
     &:hover {
         background-color: $color-primary-hover;
+    }
+
+    &--secondary {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+
+        &:hover {
+            background-color: $color-secondary-hover;
+            border-color: $color-secondary-hover;
+            color: #fff;
+        }
     }
 }
 
