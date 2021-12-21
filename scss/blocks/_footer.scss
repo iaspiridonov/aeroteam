@@ -1,0 +1,30 @@
+.footer {
+    color: #fff;
+
+    &__copyright {
+        font-weight: 400;
+        font-size: 12px;
+        color: #81858D;
+    }
+
+    &__info {
+        display: flex;
+        
+        &-text {
+            color: #8F959F;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        &-socials {
+
+            & a {
+                margin-right: 25px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

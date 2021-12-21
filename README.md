@@ -1,2 +1,0 @@
-npm init
-compilate scss

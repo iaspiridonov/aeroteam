@@ -8,12 +8,17 @@
     }
 
     &--weekend {
-        background-image: url('/img/weekend-bg.png');
+        background-image: url('img/weekend-bg.png');
         background-repeat: no-repeat;
         background-position-x: left;
         background-position-y: bottom;
         padding-bottom: 150px;
         padding-top: 120px;
+        background-color: #FAFBFC;
+    }
+
+    &--main {
+        background: #FAFBFC;
     }
 
     &--blue {
@@ -30,7 +35,7 @@
         padding-bottom: 35px;
 
         @media (min-width: $md) {
-            background-image: url('/img/map.png');
+            background-image: url('img/map.png');
             background-repeat: no-repeat;
             background-position: left center;
             background-size: contain;
@@ -51,6 +56,22 @@
         @media (min-width: $xxl) {
             padding-top: 250px;
             padding-bottom: 300px;
+        }
+    }
+
+    &--gray-gradient {
+        background: linear-gradient(180deg, #FFFFFF 0%, #EFF2F7 100%);
+    }
+
+    &--footer {
+        background-color: #16171A;
+
+        padding-top: 25px;
+        padding-bottom: 15px;
+
+        @media (min-width: $lg) {
+            padding-top: 55px;
+            padding-bottom: 35px;
         }
     }
 }
