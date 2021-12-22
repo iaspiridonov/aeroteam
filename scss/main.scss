@@ -41,6 +41,8 @@
 // 5. Objects – class-based selectors which define undecorated design patterns, 
 // for example media object known from OOCSS
 @import "objects/o-moveY";
+@import "objects/o-star";
+@import "objects/o-overlay";
 
 // 6. Blocks (aka Components) – specific UI components. 
 // This is where the majority of our work takes place 
@@ -64,6 +66,11 @@
 @import "blocks/pilot";
 @import "blocks/review";
 @import "blocks/footer";
+@import "blocks/fly";
+@import "blocks/team";
+@import "blocks/more";
+@import "blocks/service";
+@import "blocks/modal";
 
 // 7. Utilities – utilities and helper classes with ability to override anything 
 // which goes before in the triangle, eg. hide helper class.

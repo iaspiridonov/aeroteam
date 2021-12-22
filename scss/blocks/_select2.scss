@@ -2,13 +2,13 @@
     line-height: 48px !important;
 }
 
-.select2-container .select2-selection--single,
-.select2-selection__clear,
-.select2-selection__arrow {
+.cta-form__form  .select2-container .select2-selection--single,
+.cta-form__form  .select2-selection__clear,
+.cta-form__form  .select2-selection__arrow {
     height: 100% !important;
 }
 
-.select2-selection {
+.cta-form__form .select2-selection {
     border: none !important;
     border-bottom: 1px solid #CBD1DC !important;
     transition: .3s;
@@ -19,7 +19,7 @@
     }
 }
 
-.select2-container .select2-selection--single .select2-selection__rendered {
+.cta-form__form .select2-container .select2-selection--single .select2-selection__rendered {
     padding-right: 15px !important;
 }
 
@@ -27,7 +27,7 @@
     display: none ;
 }
 
-.select2-selection__placeholder {
+.cta-form__form .select2-selection__placeholder {
     color: #B8BBC0 !important;
     font-size: 16px;
     font-weight: 400;

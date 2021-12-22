@@ -1,0 +1,198 @@
+.modal {   
+   opacity: 0;
+   visibility: hidden;
+   width: 100%;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1030;
+   background-color: #fff;
+   transition: 0.3s all;
+   padding: 15px;
+   height: 100%;
+
+   @media (min-width: $sm) {
+      padding: 30px;
+   }
+
+   @media (min-width: $md) {
+      width: 760px;
+      padding: 70px;
+      height: auto;
+   }
+
+   &__info {
+      background: rgba(231, 233, 237, 0.3);
+      padding: 10px;
+      color: #616368;
+      margin-top: 15px;
+      font-size: 14px;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+
+      @media (min-width: $md) {
+         margin-top: 20px;
+      }
+   }
+
+   & .input--cta {
+      margin-right: 0;
+
+      @media (min-width: $md) {
+         margin-right: 25px;
+      }
+   }
+
+   &__price {
+      font-size: 24px;
+      font-weight: 600;
+      color: $color-text;
+
+      &-wrapper {
+         display: flex;
+         align-items: flex-end;
+         justify-content: space-between;
+      }
+   }
+
+   &__text {
+      font-weight: 400;
+      color: #A5A7AC;
+      line-height: 1;
+      font-size: 16px;
+
+      @media (min-width: $md) {
+         font-size: 18px;
+      }
+   }
+
+   &__title {
+      font-size: 24px;
+      margin-bottom: 15px;
+      line-height: 1.1;
+
+      @media (min-width: $md) {
+         font-size: 36px;
+         margin-bottom: 30px;
+      }
+   }
+
+   &__context {
+      font-size: 14px;
+      color: #A5A7AC;
+      font-weight: 300;
+      margin-bottom: 15px;
+   }
+
+   & .select2-selection {
+      border: none !important;
+      border-bottom: 1px solid #CBD1DC !important;
+      transition: .3s;
+      border-radius: 0 !important;
+
+      &:hover {
+         border-color: $color-text !important;
+      }
+   }
+
+   & .select2-selection, & .select2-selection__arrow {
+      height: 40px !important;
+
+      @media (min-width: $lg) {
+         height: 48px !important;
+      }
+   }
+
+   & .select2-container {
+         width: 50% !important;
+
+         @media (min-width: $sm) {
+            width: 50% !important;
+         }
+   }
+
+   & .select2-selection__rendered {
+      font-size: 16px;
+
+      @media (min-width: $lg) {
+         font-size: 18px;
+      }
+   }
+}
+
+.modal.active {
+   opacity: 1;
+   visibility: visible;
+   display: block;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   fill: #444;
+   cursor: pointer;
+}
+
+.modal__bot {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.modal__wrapper {
+   width: 100%;
+   height: 40px;
+   margin-top: 15px;
+
+   &--w25 {
+      width: 50% !important;
+
+      @media (min-width: $md) {
+         width: 25% !important;
+      }
+   }
+
+   &--w100 {
+      width: 100% !important;
+
+      @media (min-width: $md) {
+         width: 50% !important;
+      }
+   }
+
+   @media (min-width: $sm) {
+         width: 50%;
+   }
+
+   @media (min-width: $lg) {
+         height: 49px;
+         margin-top: 0;
+
+         &:last-child {
+            padding-right: 0;
+            margin-top: 0;
+         }
+   }
+
+   & span.select2 {
+         height: 100%;
+         width: 100% !important;
+   }
+
+   & input.input {
+         height: 100%;
+         width: 100%;
+   }
+
+   & .js-international-phone {
+         height: 100%;
+         width: 100% !important;
+   }
+}

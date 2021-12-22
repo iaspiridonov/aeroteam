@@ -1,0 +1,15 @@
+.o-star {
+    fill: #FFB320;
+
+    & * {
+        fill: #FFB320;
+    }
+
+    &--star {
+        fill: #DBDBDB;
+
+        & * {
+            fill: #DBDBDB;
+        }
+    }
+}

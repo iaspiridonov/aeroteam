@@ -1,0 +1,52 @@
+.fly {
+
+    border-bottom: 1px solid #e6e6e6;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & .select2-selection, & .select2-selection__arrow {
+        height: 48px !important;
+    }
+
+    & .select2-container {
+        width: 200px !important;
+
+        @media (min-width: $sm) {
+            width: 250px !important;
+        }
+    }
+
+    & .select2-selection__rendered, & .select2-results__option {
+        text-align: center;
+    }
+
+    &__item {
+
+        &-img {
+            width: 100%;
+
+            & img {
+                max-width: 400px;
+                width: 100%;
+                object-fit: cover;
+
+                @media (min-width: $sm) {
+                    max-width: 300px;
+                }
+
+                @media (min-width: $md) {
+                    width: 100%;
+                    max-width: initial;
+                }
+            }
+        }
+    }
+}

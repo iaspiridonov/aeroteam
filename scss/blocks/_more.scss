@@ -1,0 +1,16 @@
+.more {
+    font-size: 20px;
+    text-decoration: none;
+    color: $color-text;
+    border-bottom: 2px solid;
+    transition: .3s;
+
+    @media (min-width: $lg) {
+        font-size: 30px;
+    }
+
+    &:hover {
+        color: $color-text;
+        border-bottom: 1px solid transparent;
+    }
+}
