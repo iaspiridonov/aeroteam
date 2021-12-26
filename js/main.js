@@ -1,4 +1,17 @@
 $(document).ready(function() {
+
+    $('.service__dop-add').click(function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('service__dop-added')) {
+            $(this).removeClass('service__dop-added');
+            $(this).html('Добавить');
+            $(this).find('.service__dop-delete').hide();
+        } else {
+            $(this).addClass('service__dop-added');
+            $(this).html('Добавлено<span class="service__dop-delete">убрать</span>');
+            $(this).find('.service__dop-delete').show();
+        }
+    });
     
     // init select2 for <select></select>
     $('.js-enter-item').select2({
@@ -20,8 +33,26 @@ $(document).ready(function() {
     var input = document.querySelector(".js-phone");
     if (input) {
         window.intlTelInput(input, {
-            initialCountry: "ru",
+            initialCountry: "md",
             preferredCountries: [
+                "md",
+                "ru",
+                "ua",
+                "kz",
+                "by"
+            ],
+            customContainer: "js-international-phone",
+            separateDialCode: true
+        });
+    }
+
+    // init international phones
+    var input = document.querySelector(".js-phone-modal");
+    if (input) {
+        window.intlTelInput(input, {
+            initialCountry: "md",
+            preferredCountries: [
+                "md",
                 "ru",
                 "ua",
                 "kz",
@@ -34,12 +65,15 @@ $(document).ready(function() {
 
     // init swiperjs
     const swiper = new Swiper('.js-swiper-weekend', {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 15,
-        centeredSlides: true,
         loop: true,
         // Responsive breakpoints
         breakpoints: {
+            325: {
+                slidesPerView: 2,
+                centeredSlides: false
+            },
             576: {
                 slidesPerView: 1,
                 centeredSlides: false
@@ -57,8 +91,23 @@ $(document).ready(function() {
         },
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.weekend-item__nav--next',
+          prevEl: '.weekend-item__nav--prev',
+        }
+    });
+
+    // init swiperjs
+    const swiperMain = new Swiper('.js-swiper-main', {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-main-next',
+          prevEl: '.swiper-main-prev',
+        },
+        pagination: {
+            el: ".swiper-main-pagination",
+            type: "fraction",
         },
     });
 

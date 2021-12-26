@@ -4,7 +4,11 @@
     &__img {
         width: 100%;
         transition: .3s;
-        box-shadow: 0px 18px 76px rgba(192, 195, 201, 0.34);  
+        box-shadow: 0 0 10px 3px rgba(192, 195, 201, 0.34);
+        
+        & img {
+            width: 100%;
+        }
     }
 
     &__text {
@@ -45,7 +49,7 @@
     }
 
     &__nav {
-        bottom: -80px;
+        bottom: 0;
         top: initial;
         width: 60px;
         height: 60px;
@@ -53,7 +57,7 @@
         cursor: pointer;
 
         @media (min-width: $sm) {
-            bottom: -110px;
+            bottom: -40px;
         }
 
         &:after {

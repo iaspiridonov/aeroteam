@@ -33,6 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">О нас</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="js-open-modal button d-flex d-lg-none mt-3" data-modal="1">Заказать сертификат</a>
+                    </li>
                 </ul>
             </div>
             <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,11 +44,11 @@
                 </svg>
             </button>
             <div class="d-flex order-1 order-lg-3">
-                <a href="tel:+37379472172" class="d-none d-lg-flex button button--transparent me-3">
+                <a href="tel:+37379472172" class="button button--transparent me-3">
                     <div class="u-line-height-1">+(373) 794-721-72</div>
                     <div class="u-font-size-0p75">Бесплатная консультация</div>
                 </a>
-                <div class="button js-open-modal" data-modal="1">Заказать сертификат</div>
+                <a href="#" class="button d-none d-lg-flex js-open-modal" data-modal="1">Заказать сертификат</a>
             </div>
         </div>
     </nav>
@@ -85,7 +88,7 @@
                             <input class="js-phone" type="text" name="phone" placeholder="Телефон">
                         </div>
                     </div>
-                    <input type="submit" value="Заказать" class="button ms-xxl-5 ms-xl-4 ms-lg-3 ms-0 mt-4 mt-lg-0">
+                    <input type="submit" value="Заказать" class="button ms-xxl-5 ms-xl-4 ms-xl-3 ms-0 mt-4 mt-xl-0">
                 </form>
             </div>
         </div>
@@ -109,7 +112,9 @@
                           <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="weekend-item">
-                                    <img class="weekend-item__img" src="img/weekend-1.jpg" alt="weekend">
+                                    <div class="weekend-item__img">
+                                        <img src="img/weekend-1.jpg" alt="weekend">
+                                    </div>
                                     <div class="weekend-item__text">
                                         <div class="weekend-item__text-title">Аренда самолета</div>
                                         <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки.</div>
@@ -118,17 +123,21 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="weekend-item">
-                                    <img class="weekend-item__img" src="img/weekend-2.png" alt="weekend">
+                                    <div class="weekend-item__img">
+                                        <img src="img/weekend-2.png" alt="weekend">
+                                        <div class="weekend-item__tag weekend-item__tag--popular">Популярное</div>
+                                    </div>
                                     <div class="weekend-item__text">
                                         <div class="weekend-item__text-title">Аренда самолета</div>
-                                        <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки. Подберем самый лучший вариант частного самолета для</div>
+                                        <div class="weekend-item__text-desc">Подберем самый лучший вариант частного</div>
                                     </div>
-                                    <div class="weekend-item__tag weekend-item__tag--popular">Популярное</div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="weekend-item">
-                                    <img class="weekend-item__img" src="img/weekend-3.png" alt="weekend">
+                                    <div class="weekend-item__img">
+                                        <img src="img/weekend-3.png" alt="weekend">
+                                    </div>
                                     <div class="weekend-item__text">
                                         <div class="weekend-item__text-title">Аренда самолета</div>
                                         <div class="weekend-item__text-desc">Подберем самый</div>
@@ -137,7 +146,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="weekend-item">
-                                    <img class="weekend-item__img" src="img/weekend-4.png" alt="weekend">
+                                    <div class="weekend-item__img">
+                                        <img src="img/weekend-4.png" alt="weekend">
+                                    </div>
                                     <div class="weekend-item__text">
                                         <div class="weekend-item__text-title">Аренда самолета</div>
                                         <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки.</div>
@@ -146,7 +157,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="weekend-item">
-                                    <img class="weekend-item__img" src="img/weekend-4.png" alt="weekend">
+                                    <div class="weekend-item__img">
+                                        <img src="img/weekend-4.png" alt="weekend">
+                                    </div>
                                     <div class="weekend-item__text">
                                         <div class="weekend-item__text-title">Аренда самолета</div>
                                         <div class="weekend-item__text-desc">Подберем самый лучший вариант частного самолета для Вашей поездки.</div>
@@ -156,8 +169,8 @@
                         </div>
                       </div>
                       <!-- If we need navigation buttons -->
-                      <div class="swiper-button-prev weekend-item__nav"></div>
-                      <div class="swiper-button-next weekend-item__nav"></div>
+                      <div class="swiper-button-prev weekend-item__nav weekend-item__nav--prev"></div>
+                      <div class="swiper-button-next weekend-item__nav weekend-item__nav--next"></div>
                 </div>
             </div>
         </div>
@@ -202,92 +215,92 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1">
                     <a href="img/gal-1.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-1.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1">
                     <a href="img/gal-2.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-2.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1">
                     <a href="img/gal-3.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-3.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1">
                     <a href="img/gal-1.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-1.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1">
                     <a href="img/gal-2.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-2.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1">
                     <a href="img/gal-3.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-3.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-1.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-1.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-2.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-2.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-3.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-3.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-1.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-1.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-2.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-2.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-3.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-3.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-1.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-1.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-2.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-2.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-3.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-3.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-1.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-1.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-2.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-2.png" alt="gallery1">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 d-none d-sm-block">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2 px-1 d-none d-sm-block">
                     <a href="img/gal-3.png" data-fancybox="gal">
                         <img class="w-100 h-100 o-moveY" src="img/gal-3.png" alt="gallery1">
                     </a>
@@ -298,16 +311,64 @@
     
     <section class="section">
         <div class="container">
-            <div class="row align-items-lg-center">
-                <div class="col-lg-5 col-md-6 col-12 mb-md-0 mb-4">
-                    <div class="u-h1 mb-4">Незабываемое предложение руки и сердца</div>
-                    <div class="u-text mb-4">Удивите свою вторую половинку романтическим путешествием! Предлагаем романтический полет на самолете – незабываемые и яркие впечатления гарантированы!</div>
-                    <div>
-                        <a href="#" class="button button--transparent">Подробнее</a>
+
+
+            <div class="swiper js-swiper-main">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row align-items-lg-center">
+                            <div class="col-lg-5 col-md-6 col-12 mb-md-0 mb-4">
+                                <div class="swiper-main__nav mb-lg-5 mb-4">
+                                    <div class="swiper-main-prev">
+                                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.5348 0.877319L0.0498047 9.36232L8.5348 17.8473L9.9498 16.4333L2.8778 9.36232L9.9498 2.29132L8.5348 0.877319Z"/>
+                                        </svg>                                        
+                                    </div>
+                                    <div class="swiper-main-pagination mx-3"></div>
+                                    <div class="swiper-main-next">
+                                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4652 0.877319L9.9502 9.36232L1.4652 17.8473L0.0501957 16.4333L7.1222 9.36232L0.0501957 2.29132L1.4652 0.877319Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="u-h1 mb-4">Незабываемое предложение руки и сердца</div>
+                                <div class="u-text mb-4">Удивите свою вторую половинку романтическим путешествием! Предлагаем романтический полет на самолете – незабываемые и яркие впечатления гарантированы!</div>
+                                <div>
+                                    <a href="#" class="button button--transparent">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 offset-lg-1">
+                                <img class="w-100" src="img/pred.png" alt="pred">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-12 offset-lg-1">
-                    <img class="w-100" src="img/pred.png" alt="pred">
+                    <div class="swiper-slide">
+                        <div class="row align-items-lg-center">
+                            <div class="col-lg-5 col-md-6 col-12 mb-md-0 mb-4">
+                                <div class="swiper-main__nav mb-5">
+                                    <div class="swiper-main-prev">
+                                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.5348 0.877319L0.0498047 9.36232L8.5348 17.8473L9.9498 16.4333L2.8778 9.36232L9.9498 2.29132L8.5348 0.877319Z"/>
+                                        </svg>                                        
+                                    </div>
+                                    <div class="swiper-main-pagination mx-3"></div>
+                                    <div class="swiper-main-next">
+                                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4652 0.877319L9.9502 9.36232L1.4652 17.8473L0.0501957 16.4333L7.1222 9.36232L0.0501957 2.29132L1.4652 0.877319Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="u-h1 mb-4">Слайд 2</div>
+                                <div class="u-text mb-4">Удивите свою вторую половинку романтическим путешествием! Предлагаем романтический полет на самолете – незабываемые и яркие впечатления гарантированы!</div>
+                                <div>
+                                    <a href="#" class="button button--transparent">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 offset-lg-1">
+                                <img class="w-100" src="img/pred.png" alt="pred">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -343,9 +404,9 @@
     </section>
 
     <section class="section section--map">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5 offset-md-7 col-12">
+                <div class="col-xl-5 col-md-6 offset-md-6 col-12">
                     <div class="u-h1 mb-4">
                         Как добраться?
                     </div>
@@ -603,7 +664,7 @@
                     <input class="input input--cta" type="text" placeholder="Имя, Фамилия">
                 </div>
                 <div class="modal__wrapper">
-                    <input class="js-phone" type="text" name="phone" placeholder="Телефон">
+                    <input class="js-phone js-phone-modal" type="text" name="phone" placeholder="Телефон">
                 </div>
             </div>
         </div>

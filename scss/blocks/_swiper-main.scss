@@ -1,0 +1,46 @@
+.swiper-main-next, .swiper-main-prev {
+
+    & svg path {
+        fill: #395CB8;
+    }
+
+    &.swiper-button-disabled {
+
+        & svg path {
+            fill: #DBDBDB !important;
+        }
+    }
+}
+
+.swiper-main__nav {
+    display: flex;
+}
+
+.swiper-main-pagination {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    bottom: initial;
+}
+
+.js-swiper-weekend {
+    padding-top: 15px;
+    padding-bottom: 90px;
+    padding-right: 30px;
+
+    @media (min-width: $sm) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: $md) {
+        padding-right: 50px;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    @media (min-width: $lg) {
+        padding-top: 130px;
+        padding-bottom: 80px;
+    }
+}

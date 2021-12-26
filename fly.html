@@ -33,6 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">О нас</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="js-open-modal button d-flex d-lg-none mt-3" data-modal="1">Заказать сертификат</a>
+                    </li>
                 </ul>
             </div>
             <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,11 +44,11 @@
                 </svg>
             </button>
             <div class="d-flex order-1 order-lg-3">
-                <a href="tel:+37379472172" class="d-none d-lg-flex button button--transparent me-3">
+                <a href="tel:+37379472172" class="button button--transparent me-3">
                     <div class="u-line-height-1">+(373) 794-721-72</div>
                     <div class="u-font-size-0p75">Бесплатная консультация</div>
                 </a>
-                <div class="button js-open-modal" data-modal="1">Заказать сертификат</div>
+                <a href="#" class="button d-none d-lg-flex js-open-modal" data-modal="1">Заказать сертификат</a>
             </div>
         </div>
     </nav>
@@ -148,9 +151,9 @@
     </section>
 
     <section class="section section--map">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5 offset-md-7 col-12">
+                <div class="col-xl-5 col-md-6 offset-md-6 col-12">
                     <div class="u-h1 mb-4">
                         Как добраться?
                     </div>
@@ -408,7 +411,7 @@
                     <input class="input input--cta" type="text" placeholder="Имя, Фамилия">
                 </div>
                 <div class="modal__wrapper">
-                    <input class="js-phone" type="text" name="phone" placeholder="Телефон">
+                    <input class="js-phone js-phone-modal" type="text" name="phone" placeholder="Телефон">
                 </div>
             </div>
         </div>
