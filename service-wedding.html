@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="node_modules/bootstrap5/src/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="node_modules/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Aeroteam|Полеты</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-white">
+        <div class="container">
+            <a class="navbar-brand order-0" href="#">
+                <img src="img/logo.png" alt="logo" loading="lazy">
+            </a>
+            <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link--active" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Полеты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="js-open-modal button d-flex d-lg-none mt-3" data-modal="1">Заказать сертификат</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.25 22.5H15V20H26.25V22.5ZM26.25 16.25H3.75V13.75H26.25V16.25ZM26.25 10H3.75V7.5H26.25V10Z" fill="#292323"/>
+                </svg>
+            </button>
+            <div class="d-flex order-1 order-lg-3">
+                <a href="tel:+37379472172" class="button button--transparent me-3">
+                    <div class="u-line-height-1">+(373) 794-721-72</div>
+                    <div class="u-font-size-0p75">Бесплатная консультация</div>
+                </a>
+                <a href="#" class="button d-none d-lg-flex js-open-modal" data-modal="1">Заказать сертификат</a>
+            </div>
+        </div>
+    </nav>
+                
+    <section class="section pb-0">
+        <div class="container">
+            
+            <div class="row mb-5 inner pb-5">
+                <div class="col-12 d-sm-none">
+                    <div class="inner__head mb-1">
+                        <div class="inner__title">
+                            Предложение руки и сердца
+                        </div>
+                    </div>
+                    <a href="img/serv2-main.png" class="inner__star mb-3" data-fancybox="review3">
+                        <div>
+                            <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                            </svg>
+                            <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                            </svg>
+                            <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                            </svg>
+                            <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                            </svg>
+                            <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                            </svg>
+                        </div>
+                        <span class="inner__star-text">10 отзывов</span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-12 pe-xl-5 pe-md-4 mb-md-0 mb-4">
+                    <div class="inner__gal-main">
+                        <a href="img/serv2-main.png" data-fancybox="serv2">
+                            <img class="w-100" src="img/serv2-main.png" alt="">
+                        </a>
+                    </div>
+                    <div class="inner__gal-mini">
+                        <a class="inner__gal-mini-item" href="img/serv21.png" data-fancybox="serv2">
+                            <img class="w-100" src="img/serv21.png" alt="">
+                        </a>
+                        <a class="inner__gal-mini-item" href="img/serv22.png" data-fancybox="serv2">
+                            <img class="w-100" src="img/serv22.png" alt="">
+                        </a>
+                        <a class="inner__gal-mini-item" href="img/serv23.png" data-fancybox="serv2">
+                            <img class="w-100" src="img/serv23.png" alt="">
+                        </a>
+                        <a class="inner__gal-mini-item" href="img/serv21.png" data-fancybox="serv2">
+                            <img class="w-100" src="img/serv21.png" alt="">
+                        </a>
+                        <a class="inner__gal-mini-item" href="img/serv22.png" data-fancybox="serv2">
+                            <img class="w-100" src="img/serv22.png" alt="">
+                        </a>
+                        <div class="inner__gal-mini-item">
+                            <a target="_blank" href="#">
+                                <img class="inner__gal-mini-youtube" src="img/ico/youtube-big.svg" alt="youtube">
+                                <img class="w-100" src="img/serv23.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 ps-xl-5 ps-md-4">
+                    <div class="inner__info">
+                        <div class="d-sm-block d-none inner__head mb-1">
+                            <div class="inner__title">
+                                Предложение руки и сердца
+                            </div>
+                        </div>
+                        <a href="img/serv2-main.png" class="d-sm-flex d-none inner__star mb-3" data-fancybox="review3">
+                            <div>
+                                <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                                </svg>
+                                <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                                </svg>
+                                <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                                </svg>
+                                <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                                </svg>
+                                <svg class="o-star" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z" fill="#DBDBDB"/>
+                                </svg>
+                            </div>
+                            <span class="inner__star-text">10 отзывов</span>
+                        </a>
+                        <a href="img/serv21.png" class="inner__star mb-3 d-none" data-fancybox="review3"></a>
+                        <a href="img/serv22.png" class="inner__star mb-3 d-none" data-fancybox="review3"></a>
+                        <a href="img/serv23.png" class="inner__star mb-3 d-none" data-fancybox="review3"></a>
+                        <div class="inner__block">
+                            <div class="inner__dop mb-4">
+                                <div class="inner__dop-text mb-2">Выберите длительность:</div>
+                                <div class="inner__radio">
+                                    <input type="radio" class="btn-check js-duration" name="options" id="option1" autocomplete="off" 
+                                        data-duration="15"
+                                        data-price="900"
+                                    >
+                                    <label class="btn btn-secondary mb-1 js-duration--active" for="option1">15 мин</label>
+                                </div>
+                                <div class="inner__radio">
+                                    <input type="radio" class="btn-check js-duration" name="options" id="option2" autocomplete="off"
+                                        data-duration="30"
+                                        data-price="1800"
+                                    >
+                                    <label class="btn btn-secondary mb-1" for="option2">30 мин</label>
+                                </div>
+                                <div class="inner__radio">
+                                    <input type="radio" class="btn-check js-duration" name="options" id="option3" autocomplete="off"
+                                        data-duration="45"
+                                        data-price="2700"
+                                    >
+                                    <label class="btn btn-secondary mb-1" for="option3">45 мин</label>
+                                </div>
+                                <div class="inner__radio">
+                                    <input type="radio" class="btn-check js-duration" name="options" id="option4" autocomplete="off"
+                                        data-duration="60"
+                                        data-price="3600"
+                                    >
+                                    <label class="btn btn-secondary mb-1" for="option4">60 мин</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 inner__duration-text inner__duration-text--active duration-15">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте.15</div>
+                            <div class="mb-3 inner__duration-text duration-30">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте.30</div>
+                            <div class="mb-3 inner__duration-text duration-45">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте.45</div>
+                            <div class="mb-3 inner__duration-text duration-60">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте.60</div>
+                            <div class="inner__dop mb-4">
+                                <div class="inner__dop-text mb-2">Маршрут полета:</div>
+                                <div class="mb-3 inner__duration-text inner__duration-text--active duration-15">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте15.</div>
+                                <div class="mb-3 inner__duration-text duration-30">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте30.</div>
+                                <div class="mb-3 inner__duration-text duration-45">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте45.</div>
+                                <div class="mb-3 inner__duration-text duration-60">Подарочная карта предназначена любителям насладиться незабываемым и красочным приключением – полётом на самолёте60.</div>
+                            </div>
+                            <div class="inner__dop inner__dop-big mb-4">
+                                <div class="inner__dop-left">
+                                    <div class="inner__dop-text mb-2">Выбор самолета:</div>
+                                    <div class="custom-checkbox u-mb-4 js-fly">
+                                        <input checked class="custom-checkbox__input" type="radio" id="sokata_i" name="fly" value="sokata">
+                                        <label for="sokata_i">SOKATA TB9</label>
+                                    </div>
+                                    <div class="custom-checkbox u-mb-4 js-fly">
+                                        <input class="custom-checkbox__input" type="radio" id="piristrel_i" name="fly" value="piristrel">
+                                        <label for="piristrel_i">PIRISTREL VIRUS</label>
+                                    </div>
+                                    <div class="custom-checkbox u-mb-4 js-fly">
+                                        <input class="custom-checkbox__input" type="radio" id="sting_i" name="fly" value="sting">
+                                        <label for="sting_i">Стинг TL2000</label>
+                                    </div>
+                                </div>
+                                <div class="inner__dop-right">
+                                    <img id="sokata" class="inner__dop-right-item inner__dop-right-item--active" src="img/fly1.jpg" alt="fly">
+                                    <img id="piristrel" class="inner__dop-right-item" src="img/fly2.jpg" alt="fly">
+                                    <img id="sting" class="inner__dop-right-item" src="img/fly3.jpg" alt="fly">
+                                </div>
+                            </div>
+                            <div class="inner__dop mb-4">
+                                <div class="inner__dop-text mb-2">Дополнительные услуги:</div>
+                                <div class="custom-checkbox u-mb-4 js-additional">
+                                    <input class="custom-checkbox__input" type="checkbox" id="add1" name="additional" value="2000">
+                                    <label for="add1">Монтаж видео, организация <b>2000 леев</b></label>
+                                </div>
+                                <div class="custom-checkbox u-mb-4 js-additional">
+                                    <input class="custom-checkbox__input" type="checkbox" id="add2" name="additional" value="300">
+                                    <label for="add2">Видеосъемка в салоне и исходники видео <b>300 леев</b></label>
+                                </div>
+                            </div>
+                            <div class="inner__footer">
+                                <div class="inner__footer-wrapper">
+                                    Итого:
+                                    <b class="inner__footer-price"><span id="js-price">ХХХ</span> леев</b>
+                                </div>
+                                <a href="#" class="button js-open-modal" data-modal="1">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+     
+    <div class="modal" data-modal="1">
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+
+        <div class="modal__title">Заказ сертификата</div>
+        <div class="mb-4">
+            <div class="modal__context">Выберите сертификат и дату полета</div>
+            <div class="modal__bot">
+                <div class="modal__wrapper modal__wrapper--w100 pe-md-4">
+                    <select name="cert" class="js-enter-item">
+                        <option value="1">Прыжок с парашютом</option>
+                        <option value="2">необычный</option>
+                    </select>
+                </div>
+                <div class="modal__wrapper modal__wrapper--w25">
+                    <input type="date" class="input">
+                </div>
+                <div class="modal__wrapper ps-sm-4 ps-3 modal__wrapper--w25">
+                    <input type="time" class="input">
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="modal__context">Контактные данные</div>
+            <div class="modal__bot cta-form__container">
+                <div class="modal__wrapper pe-sm-4 pe-3">
+                    <input class="input input--cta" type="text" placeholder="Имя, Фамилия">
+                </div>
+                <div class="modal__wrapper">
+                    <input class="js-phone js-phone-modal" type="text" name="phone" placeholder="Телефон">
+                </div>
+            </div>
+        </div>
+        <div class="modal__price-wrapper">
+            <div>
+                <div class="modal__text">Итого:</div>
+                <div class="modal__price">2500 леев</div>
+            </div>
+            <a href="#" class="button">Заказать</a>
+        </div>
+
+        <div class="modal__info">
+            <svg class="me-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.8" d="M8.99935 17.3346C4.39698 17.3346 0.666016 13.6037 0.666016 9.0013C0.666016 4.39893 4.39698 0.667969 8.99935 0.667969C13.6017 0.667969 17.3327 4.39893 17.3327 9.0013C17.3276 13.6016 13.5996 17.3296 8.99935 17.3346ZM8.16602 11.5013V13.168H9.83268V11.5013H8.16602ZM8.16602 4.83464V9.83464H9.83268V4.83464H8.16602Z" fill="#B8BBC0"/>
+            </svg>
+            Ваш сертификат будет годен в течении 3-х месяцев</div>
+
+    </div>
+
+    <!-- Подложка под модальным окном -->
+    <div class="overlay js-overlay-modal"></div>
+
+    <footer class="section section--footer footer">
+        <div class="container">
+            <div class="row pb-4">
+                <div class="col-xl-4 col-sm-8 col-12 order-lg-1 order-xl-1 order-2 mb-sm-0 mb-5">
+                    <div class="footer__info">
+                        <div class="me-sm-5 me-3">
+                            <img class="footer__info-logo" src="img/logo-grayscale.png" alt="logo">
+                        </div>
+                        <div>
+                            <div class="footer__info-text mb-4">
+                                Дарите подарочные сертификаты на новые потрясающие эмоции Вашим родным и близким!
+                            </div>
+                            <div class="footer__info-socials">
+                                <a href="#"><img src="img/ico/facebook.svg" alt="facebook"></a>
+                                <a href="#"><img src="img/ico/youtube.svg" alt="youtube"></a>
+                                <a href="#"><img src="img/ico/inst.svg" alt="inst"></a>
+                                <a href="#"><img src="img/ico/telegram.svg" alt="telegram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 offset-xl-1 col-sm-4 col-12 text-xl-start text-lg-center text-sm-start text-center order-xl-2 order-3">
+                    <ul class="footer__menu">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Полеты</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 offset-xl-1 col-lg-5 col-12 order-lg-3 order-1 mb-xl-0 mb-5">
+                    <div class="footer__info-text mb-2">
+                        Наш телефон
+                    </div>
+                    <div class="footer__contacts mb-4">
+                        <a href="tel:+37379472172" class="footer__phone">+(373) 794-721-72</a>
+                        <a href="mailto:info@aeroteam.md" class="footer__mail">info@aeroteam.md</a>
+                    </div>
+                    <div class="footer__info-text mb-sm-4 mb-3">Также вы можете писать в любой из мессенджеров</div>
+                    <div class="footer__messengers">
+                        <a href="#" class="footer__messengers-item">
+                            <img src="img/ico/telegram-color.svg" alt="telegram">
+                            <span>Telegram</span>
+                        </a>
+                        <a href="#" class="footer__messengers-item">
+                            <img src="img/ico/whatsap-color.svg" alt="whatsapp">
+                            <span>Whatsapp</span>
+                        </a>
+                        <a href="#" class="footer__messengers-item">
+                            <img src="img/ico/viber-color.svg" alt="viber">
+                            <span>Viber</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer__copyright">
+                        Все права защищены. Copyright © 2021
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="node_modules/bootstrap5/src/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="node_modules/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

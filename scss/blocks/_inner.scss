@@ -1,0 +1,205 @@
+.inner {
+
+    &__gal {
+
+        &-main {
+            padding: 5px;
+            
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-mini {
+            display: flex;
+            flex-wrap: wrap;
+            
+            &-item {
+                width: 33.33%;
+                padding: 5px;
+                position: relative;
+
+                & img:not(.inner__gal-mini-youtube) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }   
+            }
+            
+            &-youtube {
+                position: absolute;
+                width: 90px;
+                left: calc(50% - 45px);
+                top: calc(50% - 30px);
+            }
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        font-size: 21px;
+        font-weight: 700;
+        color: #000;
+        line-height: 1.3;
+        padding-right: 15px;
+
+        @media (min-width: $lg) {
+            font-size: 30px;
+        }
+    }
+
+    &__price {
+        font-size: 21px;
+        color: $color-primary;
+        font-weight: 700;
+        line-height: 1.3;
+
+        @media (min-width: $lg) {
+            font-size: 30px;
+        }
+    }
+
+    &__star {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+
+            .inner__star-text {
+                text-decoration: underline;
+            }
+        }
+
+        &-text {
+            font-size: 12px;
+            margin-left: 10px;
+            padding-top: 3px;
+            color: #000;
+        }
+    }
+
+    &__dop {
+
+        &-text {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #666;
+        }
+        
+        &-big {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        &-left {
+            width: 100%;
+            
+            @media (min-width: $lg) {
+                width: 30%;
+            }
+        }
+        
+        &-right {
+            
+            @media (min-width: $lg) {
+                width: 70%;
+                padding-left: 10px;
+            }
+            
+            width: 100%;
+            
+            &-item {
+                display: none;
+                
+                &--active {
+                    display: inline-block;
+                }
+            }
+            
+            & img {
+                width: 100%;
+                height: 130px;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    &__footer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        
+        @media (min-width: $lg) {
+            justify-content: flex-start;
+            text-align: left;
+        }
+        
+        &-wrapper {
+            width: 100%;
+            margin-bottom: 20px;
+            
+            @media (min-width: $lg) {
+                width: initial;
+                margin-bottom: 0;
+            }
+        }
+        
+        &-price {
+            font-size: 20px;
+            margin-left: 10px;
+            
+            @media (min-width: $lg) {
+                margin-right: 30px;
+                margin-left: 15px;
+            }
+        }
+    }
+    
+    &__duration {
+        
+        &-text {
+            display: none;
+            
+            &--active {
+                display: block;
+            }
+        }
+    }
+    
+    &__radio {
+        display: inline-block;
+        
+        & .js-duration--active {
+            background-color: $color-primary !important;
+            color: #fff !important;   
+        }
+        
+        & .btn-secondary {
+            background-color: transparent;
+            color: $color-primary;
+            font-weight: 500;
+            border: 2px solid $color-primary !important;
+            box-shadow: none !important;
+            
+            &:active, &:focus, &:checked {
+                background-color: $color-primary !important;
+                color: #fff;   
+            }
+        }
+        
+        .btn-check:focus+.btn-secondary, .btn-secondary:focus, .btn-check:active+.btn-secondary, .btn-check:checked+.btn-secondary, .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
+            background-color: $color-primary !important;
+            color: #fff;   
+        }
+    }
+}

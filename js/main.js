@@ -1,4 +1,46 @@
 $(document).ready(function() {
+    
+    // Генератор цены при загрузке страницы
+    price = $('.js-duration--active').siblings('input').attr('data-price');
+    $('#js-price').text(price);
+
+    $(".js-duration").change(function (e) {
+        duration = $(this).attr('data-duration');
+        $('.js-duration').siblings('.btn').removeClass('js-duration--active');
+        $(this).siblings('.btn').addClass('js-duration--active');
+        $('.inner__duration-text').removeClass('inner__duration-text--active');
+        $('.duration-'+duration).addClass('inner__duration-text--active');
+        
+        additionals = $('.js-additional').find('input');
+        additionalsPrice = 0;
+        
+        additionals.each(function(index) {
+            if ($(this).prop('checked')) {
+                additionalsPrice += Number($(this).val());
+            }
+        });
+        
+        newPrice = Number($(this).attr('data-price')) + Number(additionalsPrice);
+        $('#js-price').text(newPrice);
+    });
+    
+    $(".js-fly").change(function (e) { 
+        fly = $(this).find('input').val();
+        $('.inner__dop-right-item').removeClass('inner__dop-right-item--active');
+        $('#'+fly).addClass('inner__dop-right-item--active');
+    });
+    
+    $('.js-additional').change(function (e) {
+        price = $('#js-price').text();
+        additional = $(this).find('input');
+        
+        if (additional.prop('checked')) {
+            newPrice = Number(price) + Number($(this).find('input').val());
+        } else {
+            newPrice = Number(price) - Number($(this).find('input').val());
+        }
+        $('#js-price').text(newPrice);
+    });
 
     $('.service__dop-add').click(function(e) {
         e.preventDefault();
