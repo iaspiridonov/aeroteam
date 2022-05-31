@@ -1,9 +1,60 @@
 $(document).ready(function() {
     
     // Генератор цены при загрузке страницы
-    price = $('.js-duration--active').siblings('input').attr('data-price');
-    $('#js-price').text(price);
+    price1 = $('.js-duration--active').siblings('input').attr('data-price');
+    $('.js-price1').text(price1);
+    
+    // ВИНО кол-во пассажиров
+    $('.js-passengers').change(function (e) {
+        if ($(this).find('input').val() == 3) {
+            $('#sting_i-vine').prop('checked', true);
+            $('.inner__dop-right-item-vine').removeClass('inner__dop-right-item-vine--active');
+            $('#sting-vine').addClass('inner__dop-right-item-vine--active');
+            $('.js-fly-vine').find('input#piristrel_i-vine').parent().hide();
+            $('.js-fly-vine').find('input#sokata_i-vine').parent().hide();
+        } else {
+            $('.js-fly-vine').find('input#piristrel_i-vine').parent().show();
+            $('.js-fly-vine').find('input#sokata_i-vine').parent().show();
+        }
+    });
+    
+    // ПАРАШЮТ тип
+    $('.js-jump').change(function (e) {
+        
+        additionals2 = $('.js-jump-add').find('input');
+        additionalsPrice2 = 0;
+        
+        additionals2.each(function(index) {
+            if ($(this).prop('checked')) {
+                additionalsPrice2 += Number($(this).val());
+            }
+        });
+        
+        if ($(this).find('input').val() == 'tandem') {
+            $('.js-jump-add-block').show();
+            newPrice2 = Number($(this).find('input').attr('data-price')) + Number(additionalsPrice2);
+        } else {
+            $('.js-jump-add-block').hide();
+            newPrice2 = Number($(this).find('input').attr('data-price'));    
+        }
+    
+        $('.js-price2').text(newPrice2);
+    });
+    
+    // ПАРАШЮТ доп услуги
+    $('.js-jump-add').change(function (e) {
+        price2 = $('.js-price2').first().text();
+        additional2 = $(this).find('input');
+        
+        if (additional2.prop('checked')) {
+            newPrice2 = Number(price2) + Number($(this).find('input').val());
+        } else {
+            newPrice2 = Number(price2) - Number($(this).find('input').val());
+        }
+        $('.js-price2').text(newPrice2);
+    });
 
+    // СВАДЬБА Длительность полета
     $(".js-duration").change(function (e) {
         duration = $(this).attr('data-duration');
         $('.js-duration').siblings('.btn').removeClass('js-duration--active');
@@ -21,17 +72,26 @@ $(document).ready(function() {
         });
         
         newPrice = Number($(this).attr('data-price')) + Number(additionalsPrice);
-        $('#js-price').text(newPrice);
+        $('.js-price1').text(newPrice);
     });
     
+    // СВАДЬБА самолет
     $(".js-fly").change(function (e) { 
         fly = $(this).find('input').val();
         $('.inner__dop-right-item').removeClass('inner__dop-right-item--active');
         $('#'+fly).addClass('inner__dop-right-item--active');
     });
     
+    // ВИНО самолет
+    $(".js-fly-vine").change(function (e) { 
+        flyVine = $(this).find('input').val();
+        $('.inner__dop-right-item-vine').removeClass('inner__dop-right-item-vine--active');
+        $('#'+flyVine).addClass('inner__dop-right-item-vine--active');
+    });
+    
+    // СВАДЬБА доп услуги
     $('.js-additional').change(function (e) {
-        price = $('#js-price').text();
+        price = $('.js-price1').first().text();
         additional = $(this).find('input');
         
         if (additional.prop('checked')) {
@@ -39,7 +99,7 @@ $(document).ready(function() {
         } else {
             newPrice = Number(price) - Number($(this).find('input').val());
         }
-        $('#js-price').text(newPrice);
+        $('.js-price1').text(newPrice);
     });
 
     $('.service__dop-add').click(function(e) {
@@ -207,6 +267,63 @@ document.addEventListener('DOMContentLoaded', function() {
             и будем искать модальное окно с таким же атрибутом. */
          var modalId = this.getAttribute('data-modal'),
              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+             
+            if (modalId == 'wedding') {
+                modalDuration = $('input[name=options]:checked').val();
+                $('.js-modal-wedding-duration').text(modalDuration);
+                $('.js-modal-wedding-duration').val(modalDuration);
+                
+                modalFly = $('input[name=fly]:checked').siblings('label').text();
+                $('.js-modal-wedding-fly').text(modalFly);
+                $('.js-modal-wedding-fly').val(modalFly);
+                
+                if ($('#add1').prop('checked')) {
+                    modalAdd1WeddingText = $('#add1').siblings('label').text();
+                    $('.js-modal-wedding-add1').val(modalAdd1WeddingText);
+                    $('.js-modal-wedding-add1').text(modalAdd1WeddingText);
+                    $('.js-modal-wedding-add1').show();
+                } else {
+                    $('.js-modal-wedding-add1').val('0');
+                    $('.js-modal-wedding-add1').hide();
+                }
+                
+                if ($('#add2').prop('checked')) {
+                    modalAdd2WeddingText = $('#add2').siblings('label').text();
+                    $('.js-modal-wedding-add2').val(modalAdd2WeddingText);
+                    $('.js-modal-wedding-add2').text(modalAdd2WeddingText);
+                    $('.js-modal-wedding-add2').val('1');
+                    $('.js-modal-wedding-add2').show();
+                } else {
+                    $('.js-modal-wedding-add2').val('0');
+                    $('.js-modal-wedding-add2').hide();
+                }
+            }
+            
+            if (modalId == 'jump') {
+                modalJump = $('input[name=jump]:checked').siblings('label').text();
+                $('.js-modal-jump-type').text(modalJump);
+                $('.js-modal-jump-type').val(modalJump);
+                
+                if ($('#add-jump').prop('checked')) {
+                    modalAddJumpText = $('#add-jump').siblings('label').text();
+                    $('.js-modal-jump-add').val(modalAddJumpText);
+                    $('.js-modal-jump-add').show();
+                    $('.js-modal-jump-add').text(modalAddJumpText);
+                } else {
+                    $('.js-modal-jump-add').val('0');
+                    $('.js-modal-jump-add').hide();
+                }
+            }
+            
+            if (modalId == 'vine') {
+                modalVine = $('input[name=passengers]:checked').val();
+                $('.js-modal-vine-passengers').text(modalVine);
+                $('.js-modal-vine-passengers').val(modalVine);
+                
+                modalFlyVine = $('input[name=fly-vine]:checked').siblings('label').text();
+                $('.js-modal-vine-fly').text(modalFlyVine);
+                $('.js-modal-vine-fly').val(modalFlyVine);
+            }
 
 
          /* После того как нашли нужное модальное окно, добавим классы
@@ -245,8 +362,5 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.modal.active').classList.remove('active');
         this.classList.remove('active');
     });
-
-
-
 
 }); // end ready

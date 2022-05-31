@@ -119,6 +119,14 @@
             &-item {
                 display: none;
                 
+                &-vine {
+                    display: none;
+                    
+                    &--active {
+                        display: inline-block;
+                    }
+                }
+                
                 &--active {
                     display: inline-block;
                 }

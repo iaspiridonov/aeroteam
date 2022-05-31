@@ -11,6 +11,15 @@
    transition: 0.3s all;
    padding: 15px;
    height: 100%;
+   
+   &__options {
+      padding-left: 0;
+      list-style-type: none;
+      
+      & li {
+         font-size: 14px;
+      }
+   }
 
    @media (min-width: $sm) {
       padding: 30px;
@@ -156,6 +165,14 @@
 
       @media (min-width: $md) {
          width: 25% !important;
+      }
+   }
+   
+   &--w33 {
+      width: 100% !important;
+      
+      @media (min-width: $md) {
+         width: 33.33% !important;
       }
    }
 
